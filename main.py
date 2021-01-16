@@ -5,8 +5,8 @@ app = FastAPI()
 
 
 @app.post("/open-sessions")
-async def root(web : str):
-    reqs = requests.get(web)
+async def root(sitio_web : str):
+    reqs = requests.get(sitio_web)
     soup = BeautifulSoup(reqs.text, 'html.parser')
 
     urls = [];
